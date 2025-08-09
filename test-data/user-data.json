@@ -1,0 +1,26 @@
+{
+  "productToSearch": "Blouse",
+  "invalidSearchTerm": "NonExistentProduct12345",
+  "category": "Dresses",
+  "filterSize": "M",
+  "filterColor": "Blue",
+  "sortOption": "Price: Lowest first",
+  "contactUsMessage": "This is a test message for the contact us form.",
+  "contactSubject": "Customer service",
+  "newsletterEmail": "test@example.com",
+  "validUser": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "password": "TestPassword123",
+    "address": "123 Test Street",
+    "city": "Test City",
+    "state": "California",
+    "zipCode": "90210",
+    "country": "United States",
+    "phone": "555-123-4567"
+  },
+  "invalidUser": {
+    "email": "invalid@test.com",
+    "password": "wrongpassword"
+  }
+}

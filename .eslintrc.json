@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "@typescript-eslint/recommended",
+    "plugin:playwright/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "prefer-const": "error",
+    "no-var": "error",
+    "playwright/no-conditional-in-test": "off",
+    "playwright/no-conditional-expect": "off",
+    "playwright/no-wait-for-timeout": "off",
+    "playwright/no-networkidle": "off",
+    "playwright/prefer-web-first-assertions": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "warn"
+  },
+  "globals": {
+    "test": "readonly",
+    "expect": "readonly"
+  }
+}
