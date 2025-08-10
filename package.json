@@ -1,7 +1,7 @@
 {
   "name": "playwright-advanced-framework",
   "version": "1.0.0",
-  "description": "Production-grade test automation framework for e-commerce testing using Playwright and TypeScript",
+  "description": "Production-grade test automation framework for e-commerce testing using Playwright and JavaScript",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
@@ -15,19 +15,26 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "type-check": "tsc --noEmit"
+    "codegen": "playwright codegen http://automationpractice.pl/",
+    "codegen:mobile": "playwright codegen --device='Pixel 5' http://automationpractice.pl/",
+    "codegen:cart": "playwright codegen http://automationpractice.pl/index.php?controller=order",
+    "codegen:auth": "playwright codegen --load-storage=auth.json http://automationpractice.pl/",
+    "codegen:record": "playwright codegen --target=javascript --output=codegen-output.js http://automationpractice.pl/",
+    "codegen:helper": "node scripts/codegen-helper.js",
+    "codegen:women": "node scripts/codegen-helper.js women",
+    "codegen:login": "node scripts/codegen-helper.js login",
+    "codegen:auto": "node scripts/auto-locator-collector.js",
+    "codegen:auto-cart": "node scripts/auto-locator-collector.js http://automationpractice.pl/index.php?controller=order cart-session",
+    "codegen:auto-login": "node scripts/auto-locator-collector.js http://automationpractice.pl/index.php?controller=authentication login-session",
+    "codegen:analyze": "node scripts/analyze-locators.js"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.45.1",
-    "@types/node": "^20.14.8",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
     "allure-playwright": "^3.0.0-beta.6",
     "eslint": "^8.57.0",
     "eslint-plugin-playwright": "^1.6.2",
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.2"
+    "prettier": "^3.3.2"
   },
   "keywords": [
     "playwright",
